@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("images/Fitness1.jpg");
+  min-height: 90%;
+}
+</style>
+
+
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 1.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+
+<title>Insert title here</title>
+</head>
+<body>
+
+<nav class="w3-top w3-sidebar w3-black w3-animate-right w3-xxxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-top w3-bar-block w3-center">
+    <a href="index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="sports.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Sports</a>
+    <a href="fitness.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Fitness</a>
+    <a href="healthyTips.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Health Tips</a>
+  </div>
+</nav>
+
+<!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-large w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+<!-- Navigation -->
+<nav class=" w3-bar w3-black w3-opacity w3-hover-opacity-off" >
+  <img class="w3-button w3-bar-item"  src="images/logo.png" alt="Your Logo" style="width:6%" style="height:6%" />
+  <a href="index.html" class="w3-button w3-bar-item">Home</a>
+  <a href="sports.html" class="w3-button w3-bar-item">Sports</a>
+  <a href="fitness.html" class="w3-button w3-bar-item">Fitness</a>
+  <a href="healthyTips.html" class="w3-button w3-bar-item">Health Tips</a>
+</nav>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge">Open from 10am to 12pm</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+  <BR>
+    <span class="w3-text-white w3-hide-small" style="font-size:80px">TRAIN HARD.SWEAT HARD</span>
+  </div>
+</header>
+
+	
+	<!-- Band Description -->
+	<section class="w3-container w3-center w3-content" style="max-width:600px">
+	  <h2 class="w3-wide">FITNESS FIRST</h2>
+	  <p class="w3-opacity"><i>We love Fitness.</i></p>
+	  <p class="w3-justify">Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles, and improve your ability to do everyday activities. Adults who sit less and do any amount of moderate-to-vigorous physical activity gain some health benefits.</p>
+	  <p><a href="#menu" class="w3-button w3-large-10 w3-border">Start Sweating</a></p>
+	</section>
+	
+ 
+<!-- Page content -->
+<div class="w3-content w3-padding-large w3-margin-top">
+  <!-- Images (Portfolio) -->
+  <img src="images/results1.jpg" alt="results" class="w3-image" width="1000" height="500">  
+</div>
+<BR>
+
+
+<!-- Gym Offerings -->
+  <div class="w3-row-padding" id="about">
+    <div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">What We Recommend</span>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="images/CoreAbsChallenge.png" alt="Aanya" style="width:100%">
+        <div class="w3-container">
+          <h3>Core and Abs Challenge</h3>
+          <p class="w3-opacity">20 Participants</p>
+          <p>This challenge works the abdominal muscles of the core. Start with a 5-second hold, and then build up to 10 seconds, 20 seconds, and 30 seconds by the end of the week. Lying flat on your back, start with your arms and legs reaching straight up toward the ceiling.</p>
+          <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="images/UpperBodyChallenge.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Upper Body Challenge</h3>
+          <p class="w3-opacity">10 Participants</p>
+          <p>Full Body Challenge is the perfect class to begin or continue your journey with resistance training. With a variety of class structures to keep workouts fresh, each class will consist of strength training intermixed with moderate to high cardio bursts.</p>
+          <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="images/MovementChallenge.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Movement Challenge</h3>
+          <p class="w3-opacity">5 Participants</p>
+          <p>Being physically active can improve your brain health, help manage weight, reduce the risk of disease, strengthen bones and muscles, and improve your ability to do everyday activities. Adults who sit less and do any amount of moderate-to-vigorous physical activity..</p>
+          <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+        </div>
+      </div>
+    </div>
+ </div>   
+</div>
+
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">ALL ABOUT YOGA</h2>
+  <p class="w3-opacity"><i>Yoga & Fitness</i></p>
+  <p class="w3-justify">Yoga is essentially a spiritual discipline based on an extremely subtle science, which focuses on bringing harmony between mind and body. It is an art and science of healthy living. The word 'Yoga' is derived from the Sanskrit root 'Yuj', meaning 'to join' or 'to yoke' or 'to unite'.</p>
+</section>
+
+ <!--Corousel SLiding Pagination-->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/Yoga1.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/Yoga2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/Yoga3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/Yoga4.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/Yoga5.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/Yoga6.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+      
+  
+   
+<BR>
+	<div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="contact">
+    <h3 class="w3-center">BENEFITS OF WORKING OUT</h3>
+    </div>
+    
+    <div class="w3-content w3-padding-large w3-margin-top">
+    <img src="images/Build Confidence.jpg" alt="Conf" class="w3-image w3-center" width="100" height="500">
+        <h2 class="w3-center">Build <span style="color:#FF0000">Confidence</span></h2>
+        <p>In the short-term, exercise has been shown to enhance our mood and influence our minds toward adopting more positive thoughts. In the long-term, physical exercise can improve our confidence by making us feel good about our physique and abilities.</p>
+        <img src="images/redLine.jpg" alt="Conf" class="w3-image w3-center" width="1000" height="1000">
+    </div>
+    
+   
+	
+	 <div class="w3-content w3-padding-large w3-margin-top">
+    <img src="images/BoostYourMood.jpg" alt="Conf" class="w3-image w3-center" width="100" height="500">
+        <h2 class="w3-center">Boost Your <span style="color:#FF0000">Mood</span></h2>
+        <p>Aerobic exercise produces endorphins, or “feel good” chemicals. It also increases your heart rate, which triggers norepinephrine, a chemical that may help the brain deal with stress more effectively. Plus, exercise helps to increase blood flow to the brain.</p>
+        <img src="images/redLine.jpg" alt="Conf" class="w3-image w3-center" width="1000" height="1000">
+        </div>
+    
+  <div class="w3-content w3-padding-large w3-margin-top">
+    <img src="images/EnergyLevels.jpg" alt="Conf" class="w3-image w3-center" width="100" height="500">
+        <h2 class="w3-center">Increase Your <span style="color:#FF0000">Energy Levels</span></h2>
+        <p>Regular physical activity can improve your muscle strength and boost your endurance. Exercise sends oxygen and nutrients to your tissues and helps your cardiovascular system work more efficiently. And when your heart and lung health improve, you have more energy to tackle daily chores.</p>
+        <img src="images/redLine.jpg" alt="Conf" class="w3-image w3-center" width="1000" height="1000">
+        </div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+ <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+ <div>
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">SFA</a>
+  </p>
+  </div>
+</footer>
+
+	
+	<script>	
+		// Automatic Slideshow - change image every 3 seconds
+		var myIndex = 0;
+		carousel();
+		
+		function carousel() {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none";
+		  }
+		  myIndex++;
+		  if (myIndex > x.length) {myIndex = 1}
+		  x[myIndex-1].style.display = "block";
+		  setTimeout(carousel, 1000);
+		}
+		
+
+		//Open and close sidebar
+		function openNav() {
+		  document.getElementById("mySidebar").style.width = "60%";
+		  document.getElementById("mySidebar").style.display = "block";
+		}
+
+		function closeNav() {
+		  document.getElementById("mySidebar").style.display = "none";
+		}
+		
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}    
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>
+</body>
+</html>
